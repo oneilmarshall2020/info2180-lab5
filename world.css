@@ -1,1 +1,158 @@
-/* Add your own styles */
+
+/* --- General Reset and Body --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9; /* Light grey background from image */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Header Section --- */
+.main-header {
+    background-color: #4a5568; 
+    background-image: url('globe-header.png'); 
+    background-repeat: no-repeat;
+    background-position: 20% center; /* Adjust based on actual image */
+    background-size: contain;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    /* Fallback gradient if image is missing */
+    background: linear-gradient(to right, #4a5568, #2d3748);
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* A slight shadow to make text pop like the example */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-left: 100px; /* Offset to accommodate the globe image */
+}
+
+/* --- Main Container --- */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* --- Search Inputs & Buttons --- */
+.search-section {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+#country {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#country:focus {
+    border-color: #4fd1c5; /* Green focus color */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between the buttons */
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98); /* Little click effect */
+}
+
+/* The Green Button */
+.btn-green {
+    background-color: #38b2ac;
+}
+.btn-green:hover {
+    background-color: #319795;
+}
+
+/* The Blue Button */
+.btn-blue {
+    background-color: #4299e1;
+}
+.btn-blue:hover {
+    background-color: #3182ce;
+}
+
+/* --- Result Table --- */
+#result {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensures corners remain rounded */
+}
+
+.look-up-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.look-up-table th,
+.look-up-table td {
+    padding: 15px 20px;
+}
+
+.look-up-table thead {
+    background-color: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.look-up-table th {
+    font-weight: 700;
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+.look-up-table tbody tr {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.look-up-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* --- Messages --- */
+.error-message {
+    color: #e53e3e;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.loading-message, .no-results {
+    color: #718096;
+    padding: 20px;
+    font-style: italic;
+}
