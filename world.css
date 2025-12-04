@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f9; /* Light grey background from image */
+    background-color: #f4f7f9; 
     color: #333;
     line-height: 1.6;
 }
@@ -16,24 +16,17 @@ body {
 /* --- Header Section --- */
 .main-header {
     background-color: #4a5568; 
-    background-image: url('globe-header.png'); 
-    background-repeat: no-repeat;
-    background-position: 20% center; /* Adjust based on actual image */
-    background-size: contain;
     color: white;
     padding: 40px 20px;
     text-align: center;
     margin-bottom: 40px;
-    /* Fallback gradient if image is missing */
-    background: linear-gradient(to right, #4a5568, #2d3748);
 }
 
 .header-content h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    /* A slight shadow to make text pop like the example */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    margin-left: 100px; /* Offset to accommodate the globe image */
+    text-align: center;
 }
 
 /* --- Main Container --- */
@@ -59,20 +52,20 @@ body {
     padding: 15px 20px;
     font-size: 16px;
     border: 1px solid #e2e8f0;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     outline: none;
     transition: border-color 0.3s;
 }
 
 #country:focus {
-    border-color: #4fd1c5; /* Green focus color */
+    border-color: #4fd1c5;
 }
 
 .button-group {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Space between the buttons */
+    gap: 15px; 
 }
 
 .btn {

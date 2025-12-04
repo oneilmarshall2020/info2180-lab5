@@ -1,5 +1,4 @@
 <?php
-// CONFIGURE YOUR DATABASE CONNECTION HERE
 $host = 'localhost';
 $username = 'lab5_user';
 $password = 'password123';
@@ -13,7 +12,6 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 
-// Capture GET variables (default to empty string if not set)
 $country = isset($_GET['country']) ? $_GET['country'] : '';
 $lookupType = isset($_GET['lookup']) ? $_GET['lookup'] : 'country';
 
@@ -54,8 +52,7 @@ try {
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Output Table Header for Countries
-        // Note: I'm using column names based on standard World DB schema.
-        // Adjust if your actual DB column names are different (e.g., 'head_of_state' vs 'HeadOfState')
+        // Note: I'm using column names based on standard World DB.
         echo '<table class="look-up-table">';
         echo '<thead><tr><th>Name</th><th>Continent</th><th>Independence Year</th><th>Head of State</th></tr></thead>';
         echo '<tbody>';
@@ -66,7 +63,7 @@ try {
             // Ensure these array keys match your specific database column names
             $name = isset($row['name']) ? $row['name'] : (isset($row['Name']) ? $row['Name'] : 'N/A');
             $continent = isset($row['continent']) ? $row['continent'] : (isset($row['Continent']) ? $row['Continent'] : 'N/A');
-            // Try standard naming conventions for indep year
+            // Try standard naming conventions for independence year
             $indepYear = isset($row['independence_year']) ? $row['independence_year'] : (isset($row['IndepYear']) ? $row['IndepYear'] : 'N/A');
             // Try standard naming conventions for Head of State
             $headOfState = isset($row['head_of_state']) ? $row['head_of_state'] : (isset($row['HeadOfState']) ? $row['HeadOfState'] : 'N/A');
